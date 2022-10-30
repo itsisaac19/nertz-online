@@ -36,7 +36,7 @@ app.use(compression());
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/client/production-inline.html');
 });
-app.get('/hero-video.mp4', (req, res) => {
+app.get('/hero-video-min.mp4', (req, res) => {
   res.sendFile(__dirname + '/client/hero-video-min.mp4');
 });
 

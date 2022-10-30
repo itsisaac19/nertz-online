@@ -4,3 +4,4 @@ server/client/indexCSS.js
 server/client/index.js
 src
 package-lock.json
+webpack.config.js
