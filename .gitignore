@@ -2,6 +2,6 @@ node_modules
 .vscode
 server/client/indexCSS.js
 server/client/index.js
-src
+server/client/moment.jpg
 package-lock.json
 webpack.config.js

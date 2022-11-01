@@ -1,0 +1,1784 @@
+@font-face {
+    font-family:"mundial";
+    src:url("https://use.typekit.net/af/4166ac/00000000000000007735ee03/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("woff2"),url("https://use.typekit.net/af/4166ac/00000000000000007735ee03/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("woff"),url("https://use.typekit.net/af/4166ac/00000000000000007735ee03/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("opentype");
+    font-display:swap;font-style:normal;font-weight:100;font-stretch:normal;
+}
+
+@font-face {
+    font-family:"mundial";
+    src:url("https://use.typekit.net/af/c0ae54/00000000000000007735ee05/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff2"),url("https://use.typekit.net/af/c0ae54/00000000000000007735ee05/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff"),url("https://use.typekit.net/af/c0ae54/00000000000000007735ee05/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("opentype");
+    font-display:swap;font-style:normal;font-weight:200;font-stretch:normal;
+}
+
+@font-face {
+    font-family:"mundial";
+    src:url("https://use.typekit.net/af/4317f4/00000000000000007735ee0b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/4317f4/00000000000000007735ee0b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/4317f4/00000000000000007735ee0b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+    font-display:swap;font-style:normal;font-weight:300;font-stretch:normal;
+}
+
+@font-face {
+    font-family:"mundial";
+    src:url("https://use.typekit.net/af/ce96c9/00000000000000007735ee08/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/ce96c9/00000000000000007735ee08/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/ce96c9/00000000000000007735ee08/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display:swap;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    cursor: auto;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    color: #222222;
+    display: grid;
+    height: 100vh;
+    margin: 0;
+
+    font-family: mundial, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+#menu {
+    display: grid;
+
+    transition: 0.5s ease;
+    transform: translateY(0px);
+    opacity: 1;
+}
+#menu.hide-animation {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+#menu.hidden {
+    display: none;
+}
+.hero {
+    margin: 4vh 6vw 0 5vw;
+    position: relative;
+}
+.hero.hidden {
+    display: none;
+}
+.hero > * {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+.hero > .show {
+    transform: translateY(0px);
+    opacity: 1;
+}
+h1.title {
+    position: absolute;
+    top: 0;
+
+    margin: 3vw;
+
+    font-family: inherit;
+    font-size: clamp(4.889rem,12.25vw,7.7rem);
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+
+}
+p.desc {
+    position: absolute;
+    top: clamp(5.889rem,13.25vw,8.7rem);
+    left: 20px;
+
+    margin: 3vw;
+    color: #292929;
+
+    font-family: inherit;
+    font-size: 24px;
+    line-height: 1.3334133333;
+    font-weight: 300;
+    letter-spacing: .009em;
+
+}
+h1.fastest {
+    font-family: inherit;
+    font-size: clamp(2.889rem,6.25vw,4.7rem);
+    line-height: 1.0555555556;
+    font-weight: 300;
+    letter-spacing: -0.012em;
+
+    height: 0;
+
+    display: grid;
+    place-items: start end;
+    grid-template-rows: min-content auto auto auto;
+}
+.fastest .new {
+    margin-top: 25px;
+    display: grid;
+    place-items: start end;
+}
+.fastest span {
+    margin-top: 50px;
+    display: grid;
+    place-items: start end;
+}
+.fastest span.play.one {
+    color: rgb(131, 131, 131);
+}
+.fastest span.play.two {
+    color: rgb(179, 179, 179);
+}
+.fastest span.play.three {
+    color: rgb(218, 218, 218);
+}
+.video-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+}
+.video-wrap img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.end-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    opacity: 1;
+
+    display: grid;
+    z-index: 100;
+
+    background: rgba(0, 0, 0, 0.162);
+
+    transition: opacity 0.3s ease;
+}
+.end-text {
+    font-size: 100px;
+    font-weight: 400;
+    margin: auto;
+    padding-bottom: 50px;
+
+    opacity: 1;
+    transition: opacity 0.8s linear;
+}
+.end-cover.hidden, .end-text.hidden {
+    display: none;
+}
+.end-cover.hide {
+    opacity: 0;
+}
+.end-text.hide {
+    opacity: 0;
+}
+
+.create-party-container {
+    position: absolute;
+    bottom: 0px;
+    left: 4vw;
+
+    width: 400px;
+    height: 200px;
+
+    background: white;
+    border: 2px solid rgb(0 0 0);
+    box-shadow: 0px -10px 20px #00000021;
+    border-bottom: none;
+    border-radius: 17px 17px 0 0;
+}
+.create-party {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    margin: 20px;
+}
+.create-party span.multi {
+    font-weight: 200;
+    margin: 0px 0 15px 0;
+}
+.create-party span.single {
+    font-weight: 200;
+    cursor: not-allowed;
+    margin: 40px 0 10px 0;
+    color: rgb(146, 146, 146);
+}
+.create-party-button {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 9px 12px 11px 12px;
+    width: auto;
+    white-space: nowrap;
+
+    background: rgb(235, 235, 235);
+    border: 1px solid rgba(203, 203, 203, 0);
+    border-radius: 9px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 1px 4px;
+    color: #333;
+
+    transition: 0.3s ease;
+}
+.create-party-button:hover {
+    background: rgb(227, 227, 227);
+}
+.create-party-button:active {
+    background: rgb(211, 211, 211);
+}
+
+.join-party-button {
+    margin: 10px 0 0 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 9px 12px 11px 12px;
+    width: auto;
+    white-space: nowrap;
+
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(221, 221, 221);
+    border-radius: 9px;
+    color: #333;
+
+    transition: 0.3s ease;
+}
+.join-party-button:hover {
+    border: 2px solid rgb(188, 188, 188);
+}
+.join-party-button:active {
+    background: rgb(247, 247, 247);
+    border: 2px solid rgb(153, 153, 153);
+}
+
+.bots-button {
+    margin: 10px 0 0 0;
+    cursor: not-allowed;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 9px 12px 11px 12px;
+    width: auto;
+    white-space: nowrap;
+
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 9px;
+    color: rgb(129, 129, 129);
+
+    opacity: 0.6;
+
+    transition: 0.3s ease;
+}
+.waiting-area {
+    margin: 6vh 6vw 0 5vw;
+    position: relative;
+}
+.waiting-area.hidden {
+    display: none;
+}
+.code-wrapper-container {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    height: 170px;
+    border: 2px solid rgb(199, 199, 199);
+    border-bottom-color: rgba(199, 199, 199, 0);
+    border-bottom-width: 0px;
+
+    border-radius: 17px 17px 0 0;
+
+    display: grid;
+}
+.code-wrapper-container.joining {
+    border-bottom-color: rgb(199, 199, 199);
+    border-bottom-width: 2px;
+    border-radius: 17px;
+    bottom: 50%;
+    height: 240px;
+}
+.code-wrapper-container.full-room {
+    
+}
+.code-wrapper-container.full-room::before {
+    content: 'Room is full!';
+    font-size: 15px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    opacity: 0;
+    color: black;
+
+    animation: explain 0.3s linear 0s 1 forwards;
+}
+.code-wrapper {
+    display: grid;
+    grid-template-rows: auto;
+    margin: 20px;
+}
+.code-label {
+    position: absolute;
+    bottom: 180px;
+    left: 10px;
+
+    color: #383838;
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 1.3334133333;
+    font-weight: 500;
+    letter-spacing: .009em;
+
+    transition: inherit;
+}
+.code-label::after {
+    content: 'Party code';
+}
+.joining .code-label {
+    bottom: 250px;
+}
+.joining .code-label::after {
+    content: 'Enter code';
+}
+.code-value {
+    margin: auto auto auto auto;
+    font-family: inherit;
+    font-size: 92px;
+    line-height: 1.0555555556;
+    font-weight: 300;
+    letter-spacing: -0.012em;
+}
+.code-value.hidden {
+    display: none;
+}
+#code-input {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    border: none;
+    background: white;
+
+    text-align: center;
+
+    color: #222222;
+
+    border-radius: 12px;
+
+    font-family: inherit;
+    font-size: 92px;
+    line-height: 1.0555555556;
+    font-weight: 300;
+    letter-spacing: -0.012em;
+}
+#code-input.hidden {
+    display: none;
+}
+#code-input:focus {
+    outline-color: #424548;
+}
+#code-input.invalid {
+    outline: red 2px solid;
+}
+
+.code-input-submit {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 9px 12px 11px 12px;
+    margin: 20px 0 0 0;
+    width: auto;
+    white-space: nowrap;
+    background: rgb(235, 235, 235);
+    border: 1px solid rgba(203, 203, 203, 0);
+    border-radius: 9px;
+    box-shadow: rgb(0 0 0 / 0%) 0px 1px 4px;
+    color: #333;
+    transition: 0.3s ease;
+}
+.code-input-submit:hover {
+    background: rgb(227, 227, 227);
+}
+.code-input-submit:active {
+    background: rgb(211, 211, 211);
+}
+.code-input-submit.hidden {
+    display: none;
+}
+.players-container {
+    width: auto;
+    height: calc(62vh);
+    display: grid;
+}
+.waiting-area > div {
+    transition: 0.2s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+.waiting-area > div.show {
+    transform: translateY(0px);
+    opacity: 1;
+}
+.waiting-area > div.slow-transition {
+    transition: 1.3s cubic-bezier(.21,.29,.25,1.09);
+}
+.players-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 35px;
+    margin: 0 10px;
+}
+.player-slot {
+    margin: 10px 0;
+    border-radius: 22px;
+    border: 1px solid rgba(229, 229, 229, 0);
+    background: rgb(237, 237, 237);
+    box-shadow: rgba(0, 0, 0, 0) 0px 5px 30px;
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
+
+    opacity: 0.5;
+
+    transition: 0.5s ease;
+}
+.player-slot.occupied {
+    opacity: 1;
+    border: 1px solid rgb(229 229 229);
+    background: white;
+    box-shadow: rgb(0 0 0 / 11%) 0px 5px 30px;
+}
+.player-slot.occupied.self {
+    border: 1px solid #333333;
+}
+.player-slot.occupied.not-self .player-name {
+    color: #6f6f6f;
+}
+.player-slot.occupied.not-self .player-label {
+    color: #9e9e9e;
+}
+.player-label {
+    color: #383838;
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 1.3334133333;
+    font-weight: 500;
+    letter-spacing: .009em;
+
+    margin: auto auto 15px auto;
+}
+.player-name {
+    font-family: inherit;
+    font-size: 30px;
+    line-height: 1.0555555556;
+    font-weight: 400;
+    letter-spacing: -0.012em;
+
+    max-width: 80%;
+    text-align: center;
+
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 15px auto auto auto;
+    background: rgb(242, 242, 242);
+}
+.player-name:focus {
+    background: rgb(230, 230, 230);
+}
+.start-wrapper {
+    position: absolute;
+    right: 20px;
+    bottom: 95px;
+    width: 160px;
+    display: grid;  
+}
+.start-button {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 9px 12px 11px 12px;
+    width: auto;
+    white-space: nowrap;
+
+    border: 1px solid rgba(203, 203, 203, 0);
+    border-radius: 9px;
+    box-shadow: rgb(0 0 0 / 0%) 0px 1px 4px;
+
+    transition: 0.3s ease;
+}
+.not-allowed.start-button:hover {
+    transform: translateY(-3px);
+}
+.not-allowed.start-button:active {
+    transform: translateY(0px);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 30px;
+}
+
+.not-allowed.start-button {
+    cursor: pointer;
+
+    color: white;
+    background: black;
+}
+
+.not-allowed.start-button.explain::before {
+    content: 'Not all players are ready!';
+    font-size: 15px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    opacity: 0;
+    color: black;
+
+    animation: explain 0.3s linear 0s 1 forwards;
+}
+@keyframes explain {
+    0% {
+        transform: translate(-50%, 0px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -17px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -35px);
+        opacity: 1;
+    }
+}
+
+.ready-up.start-button {
+    font-size: 0px;
+    color: white;
+    background: black;
+
+    transform: translateY(0px);
+
+    transition: 0.3s ease;
+    box-shadow: rgb(0 0 0 / 40%) 0px 5px 30px;
+}
+.ready-up.start-button:hover {
+    transform: translateY(-3px);
+}
+.ready-up.start-button:active {
+    transform: translateY(0px);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 30px;
+}
+.ready-up.start-button[data-ready="true"] {
+    color: black;
+    background: white;
+    border: 1px solid #d1d1d1;
+    box-shadow: rgba(0, 0, 0, 0.092) 0px 5px 30px;
+}
+.ready-up.start-button:before {
+    content: 'I\'m ready!';
+    font-size: 16px;
+}
+.ready-up.start-button[data-ready="true"]:before {
+    content: 'Unready';
+}
+
+.exit-wrapper {
+    position: absolute;
+    right: 20px;
+    bottom: 42px;
+    width: 160px;
+    display: grid;  
+}
+.exit-button {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 9px 12px 11px 12px;
+    width: auto;
+    white-space: nowrap;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(221, 221, 221);
+    border-radius: 9px;
+    color: #333;
+    transition: 0.3s ease;
+}
+.exit-button:hover {
+    border: 2px solid rgb(188, 188, 188);
+}
+.exit-button:active {
+    background: rgb(247, 247, 247);
+    border: 2px solid rgb(153, 153, 153);
+}
+
+.game-settings {
+    position: absolute;
+    left: 15px;
+    bottom: 0px;
+    width: 20%;
+    height: auto;
+
+
+    display: grid; 
+    
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(221, 221, 221);
+    border-bottom: none;
+    border-radius: 17px 17px 0 0;
+
+    padding: 10px;
+}
+.waiting-area > div.show.game-settings.not-leader {
+    opacity: 0.6;
+    pointer-events: none;
+}
+.game-settings > .points-threshold {
+    font-weight: 300;
+    margin: 10px;
+}
+.game-settings > .rounds-threshold  {
+    font-weight: 300;
+    margin: 0 10px 10px 10px;
+}
+
+#points-input {
+    margin: 15px 0 15px 0;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+}
+
+#rounds-input {
+    margin: 15px 0 5px 0;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+}
+
+#points-input:hover, #rounds-input:hover {
+    opacity: 1;
+}
+
+#points-input::-webkit-slider-thumb, #rounds-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #252525;
+    cursor: pointer;
+}
+
+#points-input::-moz-range-thumb, #rounds-input::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border: 0;
+    border-radius: 50%;
+    background: #252525;
+    cursor: pointer;
+}
+
+
+.waiting-area > div.popper-wrapper {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+
+
+    transform: translateY(-83%);
+
+    transition: background 0.3s ease, transform 0.8s ease;
+    opacity: 1;
+}
+.waiting-area > div.popper-wrapper.hide {
+    transform: translateY(-100%);
+}
+.waiting-area > div.show.popper-wrapper {
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.12);
+    opacity: 1;
+}
+.popper-wrapper #popper {
+    position: fixed;
+    z-index: 100;
+    background: white;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 69vw;
+    min-height: 400px;
+    height: 70vh;
+    min-width: 430px;
+    max-width: 800px;
+    left: 50%;
+
+    border-radius: 22px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.09);
+
+    display: grid;
+}
+
+#popper .stat-popup {
+    padding: 25px;
+    display: grid;
+    grid-template-rows: max-content;
+    height: max-content;
+    row-gap: 25px;
+}
+#popper .leaderboard {
+
+    /* HERE!! */
+}
+.leaderboard .leaderboard-label {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(88 88 88);
+}
+.leaderboard .leaderboard-list {
+    margin: 15px 0 0 0;
+}
+.leaderboard .leaderboard-list .lb-card {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: max-content max-content;
+    column-gap: 15px;
+}
+.leaderboard .leaderboard-list .pop-player-name {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(88 88 88);
+}
+.leaderboard .leaderboard-list .player-total-points {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(45 45 45);
+}
+#popper .stat-round .round-info {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: max-content max-content;
+
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(88 88 88);
+}
+.round-info b {
+    font-size: 25px;
+    font-weight: 500;
+    color: #111;
+    margin: 0 0 0 3px;
+}
+.round-info .round-number  {
+}
+.round-info .round-time  {
+    margin: 0 0 0 20px;
+}
+
+.player-list {
+    margin: 20px 0 20px 0;
+    display: grid;
+    grid-auto-flow: row;
+}
+.player-list .labels {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 25% 25% 25% 25%;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+.player-card {
+    display: grid;
+    grid-auto-flow: column;
+
+    font-weight: 400;
+    color: #424548;
+
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.popper-wrapper button.close-popper {
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 9px 12px 11px 12px;
+    width: auto;
+    white-space: nowrap;
+    border: 1px solid rgba(203, 203, 203, 0);
+    border-radius: 9px;
+    box-shadow: rgb(0 0 0 / 0%) 0px 1px 4px;
+    background: rgb(238, 238, 238);
+
+    
+    transition: 0.3s ease;
+}
+button.close-popper:hover {
+    background: rgb(227, 227, 227);
+}
+button.close-popper:active {
+    background: rgb(209, 209, 209);
+}
+
+.popper-wrapper:not(.show) button.close-popper {
+    bottom: -17px;
+    left: 80px;
+    right: 80px;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+:root {
+    --card-width: 60px;
+    --card-height: 100px;
+
+    --border-width: 2px;
+}
+
+#game-field.hidden {
+    display: none;
+}
+#game-field {
+    position: relative;
+    margin: 20px 20px;  
+    display: grid;
+}
+
+.BlockLayout {
+    box-sizing: inherit;
+    height: auto;
+    width: min-content;
+
+    display: grid;
+    gap: 10px;
+}
+
+.slots {
+    background-color: #2125293d;
+}
+
+.slots.draggable-container--over {
+    background-color: #212529;
+}
+
+.draggable--over.Block--isDraggable .BlockContent {
+    background-color: #212529c3;
+}
+[data-reject="true"] .draggable--over.Block--isDraggable .BlockContent {
+    background-color: white;
+}
+
+.draggable-source--is-dragging:not(.draggable--over).Block--isDraggable .BlockContent{
+    border: solid blue;
+    border-width: var(--border-width);
+    color: blue;
+}
+
+.Block--typeHollow:only-child h3{
+    display: none;
+}
+.Block--typeHollow .BlockContent {
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    position: relative;
+    border: .2rem solid #c3cfd8;
+    border-width: var(--border-width);
+
+    color: #c3cfd8;
+    background-color: #fff;
+    margin: 0;
+}
+
+.Block--isDraggable .BlockContent {
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+
+    display: grid;
+
+    position: relative;
+    border: none;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+    
+    margin: 0;
+
+    color: #212529;
+    background-color: #fff;
+    transition: color .12s cubic-bezier(.64,0,.35,1),background-color .12s cubic-bezier(.64,0,.35,1),transform .24s cubic-bezier(.32,1.46,.54,1.28),-webkit-transform .24s cubic-bezier(.32,1.46,.54,1.28);
+}
+
+.Block--typeStripes .BlockContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    position: relative;
+    height: auto;
+    background-color: #212529;
+    background-image: repeating-linear-gradient(-45deg, #fff, #fff 40%,currentColor 0,currentColor 50%, #fff 0);
+    background-size: .8rem .8rem;
+    color: #212529;
+    transition: color .12s cubic-bezier(.64,0,.35,1);
+    margin: 1px;
+}
+
+.Block--typeShell .BlockContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    color: #212529;
+    background-color: #fff;
+    border: 0.6rem solid #212529;
+    border-width: var(--border-width);
+    min-height: 12.8rem;
+}
+
+#items .BlockWrapper {
+
+}
+#slots .BlockWrapper {
+
+}
+
+.BlockWrapper {
+    position: relative;
+    display: grid;
+    width: var(--card-width);
+    height: var(--card-height);
+}
+
+.Block--isDraggable {
+    position: relative;
+    display: grid;
+    height: 100%;
+}
+.Block--isDraggable.draggable-mirror {
+    z-index: 100;
+    will-change: transform;
+}
+workpile > stack > .BlockWrapper.BlockWrapper--isDropzone.sibling-drag {
+    position: fixed;
+    z-index: 101;
+}
+@keyframes sizeup {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+.Block--isDraggable.draggable-mirror .BlockContent, 
+.BlockWrapper--isDropzone.sibling-drag .BlockContent {
+    color: white;
+    background-color: blue;
+    border-color: blue;
+    transition: transform 0.2s ease;
+    animation: sizeup 0.1s ease 0s 1 forwards;
+    width: var(--card-width);
+    height: var(--card-height);
+}
+.Block--isDraggable.draggable-mirror .BlockContent .suit-symbol path, 
+.BlockWrapper--isDropzone.sibling-drag .BlockContent .suit-symbol path {
+    stroke: white;
+}
+.Block--isDraggable.draggable-mirror .BlockContent .suit-symbol circle, 
+.BlockWrapper--isDropzone.sibling-drag .BlockContent .suit-symbol circle {
+    stroke: white;
+}
+.Block--isDraggable.draggable-mirror .BlockContent .number, 
+.BlockWrapper--isDropzone.sibling-drag .BlockContent .number {
+    color: white;
+}
+
+.BlockWrapper--isDropzone.sibling-drag:nth-child(2) .BlockContent {
+    background-color: hsl(240, 100%, 60%);
+}
+.BlockWrapper--isDropzone.sibling-drag:nth-child(3) .BlockContent {
+    background-color: hsl(240, 100%, 63%);
+}
+.BlockWrapper--isDropzone.sibling-drag:nth-child(4) .BlockContent {
+    background-color: hsl(240, 100%, 66%);
+}
+.BlockWrapper--isDropzone.sibling-drag:nth-child(5) .BlockContent {
+    background-color: hsl(240, 100%, 69%);
+}
+.BlockWrapper--isDropzone.sibling-drag:nth-child(5) .BlockContent {
+    background-color: hsl(240, 100%, 72%);
+}
+.BlockWrapper--isDropzone.sibling-drag:nth-child(6) .BlockContent {
+    background-color: hsl(240, 100%, 75%);
+}
+.BlockWrapper--isDropzone.sibling-drag:nth-child(7) .BlockContent {
+    background-color: hsl(240, 100%, 78%);
+}
+.BlockWrapper--isDropzone.sibling-drag:nth-child(8) .BlockContent {
+    background-color: hsl(240, 100%, 81%);
+}
+.BlockWrapper--isDropzone.sibling-drag:nth-child(9) .BlockContent {
+    background-color: hsl(240, 100%, 83%);
+}
+.BlockWrapper--isDropzone.sibling-drag:nth-child(10) .BlockContent {
+    background-color: hsl(240, 100%, 86%);
+}
+.BlockWrapper--isDropzone.sibling-drag:nth-child(11) .BlockContent {
+    background-color: hsl(240, 100%, 89%);
+}
+.BlockWrapper--isDropzone.sibling-drag:nth-child(12) .BlockContent {
+    background-color: hsl(240, 100%, 92%);
+}
+.BlockWrapper--isDropzone.sibling-drag:nth-child(13) .BlockContent {
+    background-color: hsl(240, 100%, 95%);
+}
+
+.Block {
+    display: grid;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+.BlockWrapper.draggable-dropzone--occupied .Block--typeHollow, .BlockWrapper.draggable-dropzone--occupied .Block--typeStripes {
+    box-sizing: inherit;
+    display: grid;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+#slots .Block--isDraggable .BlockContent {
+    margin: 0px;
+}
+.BlockWrapper {
+    position: relative;
+}
+.BlockContent {
+    border-radius: 7px;
+    user-select: none;
+}
+
+
+.draggable-container--is-dragging {
+    z-index: 2;
+}
+#game-field > div:not(.draggable-container--is-dragging) {
+    z-index: 1;
+}
+
+
+
+
+#items {
+    position: absolute;   
+}
+#game-field.hide {
+    transition: 0.5s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+#game-field.show {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.foundations.not-allowed {
+    pointer-events: none;
+}
+.foundations::before {
+    content: 'COMMUNITY FOUNDATIONS';
+    position: absolute;
+    top: -30px;
+    margin: 0;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 300;
+    font-variation-settings: 'wght' 450;
+
+    color: gray;
+
+    letter-spacing: 0.75px;
+
+    opacity: 0;
+}
+#game-field:not(.hidden) .foundations::before {
+    animation: fadein 0.4s linear 0.5s 1 forwards;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.foundations.BlockLayout {
+    position: relative;
+
+    margin: 8vh auto auto auto;
+
+    height: min-content;
+    max-width: 600px;
+    width: 45vw;
+
+    grid-template-columns: repeat(auto-fill, var(--card-width));
+    grid-template-rows: var(--card-height) var(--card-height);
+
+    background-color: rgba(245, 222, 179, 0);
+}
+.foundations > stack::before {
+    width: var(--card-width);
+    height: var(--card-height);
+    background: #e9e9e9;
+    border-radius: 7px;
+    display: block;
+    content: '';
+    position: absolute;
+}
+.foundations > stack {
+    opacity: 0;
+}
+.foundations > stack .BlockWrapper {
+    position: absolute;
+}
+.foundations > stack .BlockWrapper:not(.draggable-dropzone--occupied):only-child .Block--typeStripes .BlockContent {
+    opacity: 0;
+}
+.foundations > stack .BlockWrapper:not(.draggable-dropzone--occupied):not(:only-child) .Block--typeStripes .BlockContent {
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+    background-color: unset;
+    background-image: unset;
+}
+.foundations > stack .BlockWrapper.draggable-dropzone--occupied .BlockContent {
+    box-shadow: none;
+}
+.foundations > stack .BlockWrapper.draggable-dropzone--occupied:last-child .BlockContent {
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+}
+
+.timer-wrap {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    grid-auto-flow: column;
+    display: grid;
+}
+
+.timer-wrap::after {
+    content: 'TIME ELAPSED';
+    margin: 0 0 0 10px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 300;
+    font-variation-settings: 'wght' 450;
+    color: #a4a4a4;
+    letter-spacing: 0.75px;
+    line-height: 14px;
+}
+#timer {
+    font-weight: 300;
+    line-height: 15px;
+}
+
+.code-wrap-top-right {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    grid-auto-flow: column;
+    display: grid;
+    font-weight: 300;
+}
+.code-wrap-top-right::before {
+    content: 'Party code';
+    margin: 0 5px 0 0;
+    color: grey;
+}
+#party-code-top-right {
+    font-variation-settings: 'wght' 600;
+}
+
+
+
+card {
+    display: block;
+}
+
+.playing-card {
+    width: auto;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+
+    display: grid;
+}
+.top-banner {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: min-content min-content;
+}
+.top-banner .number {
+    font-size: 15px;
+    margin: auto auto auto 6px;
+}
+.top-banner svg {
+    width: 12px;
+    margin: auto auto auto 2px;
+}
+
+.bottom-banner {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: min-content min-content;
+    direction: rtl;
+}
+.bottom-banner .number {
+    font-size: 15px;
+    margin: auto 6px auto auto;
+}
+.bottom-banner svg {
+    width: 12px;
+    margin: auto 2px auto auto;
+}
+
+
+.playing-card > svg {
+    margin: 15px auto auto auto;
+    width: 25px;
+}
+.playing-card > span {
+    margin: auto;
+    font-size: 30px;
+    font-variation-settings: 'wght' 250;
+}
+.spades, .clubs {
+    color: #212529;
+}
+.hearts, .diamonds {
+    color: rgb(211, 48, 48);
+}
+
+
+
+/* Player */
+player {
+    width: min-content;
+    position: absolute;
+}
+player::before {
+    content: attr(data-player);
+    margin: 0px 0px 10px 0;
+    font-family: inherit;
+    letter-spacing: 0.75px;
+    font-weight: 300;
+}
+player::after {
+    content: 'WORK PILES';
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    margin: 0;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 300;
+    font-variation-settings: 'wght' 450;
+
+    color: gray;
+
+    letter-spacing: 0.75px;
+}
+player#player1 {
+    top: 40vh;
+    left: 50%;
+    margin-left: -185px;
+}
+player#player2 {
+    transform: rotate(90deg) scale(0.8);
+    bottom: 50%;
+    left: -70px;
+    margin-bottom: 50px;
+    pointer-events: none;
+    opacity: 0;
+    animation: player2slidein 0.5s ease 0.6s 1 forwards;
+}
+@keyframes player2slidein {
+    0% {
+        left: -70px;
+        opacity: 0;
+    }
+    100% {
+        left: -50px;
+        opacity: 0.7;
+    }
+}
+player#player3 {
+    transform: rotate(-90deg) scale(0.8);
+    bottom: 50%;
+    right: -70px;
+    margin-bottom: -50px;
+    pointer-events: none;
+    opacity: 0;
+    animation: player3slidein 0.5s ease 0.6s 1 forwards;
+}
+@keyframes player3slidein {
+    0% {
+        right: -70px;
+        opacity: 0;
+    }
+    100% {
+        right: -50px;
+        opacity: 0.7;
+    }
+}
+player#player4 {
+    transform: rotate(-180deg) scale(0.8);
+    top: 0;
+    left: 50%;
+    margin-left: -100px;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+
+
+workpile {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 10px;
+    width: auto;
+    height: min-content;
+}
+workpile > stack {
+    position: relative;
+}
+
+@keyframes blink {
+    0% {
+        border: 2px solid rgb(6, 64, 61);
+    }
+    50% {
+        border: 2px solid rgba(6, 64, 61, 0.225);
+    }
+    100% {
+        border: 2px solid rgb(6, 64, 61);
+    }
+}
+workpile > stack > .BlockWrapper:not(:nth-child(1)):not(.draggable-dropzone--occupied) .BlockContent {
+    opacity: 0.6;
+    animation: blink normal 1.5s infinite ease-in-out;
+}
+workpile > stack > .BlockWrapper:nth-child(2) {
+    position: absolute;
+    top: 16px;
+    left: 0px;
+}
+workpile > stack > .BlockWrapper:nth-child(3) {
+    position: absolute;
+    top: 32px;
+    left: 0px;
+}
+workpile > stack > .BlockWrapper:nth-child(4) {
+    position: absolute;
+    top: 48px;
+    left: 0px;
+}
+workpile > stack > .BlockWrapper:nth-child(5) {
+    position: absolute;
+    top: 64px;
+    left: 0px;
+}
+workpile > stack > .BlockWrapper:nth-child(6) {
+    position: absolute;
+    top: 80px;
+    left: 0px;
+}
+workpile > stack > .BlockWrapper:nth-child(7) {
+    position: absolute;
+    top: 96px;
+    left: 0px;
+}
+workpile > stack > .BlockWrapper:nth-child(8) {
+    position: absolute;
+    top: 112px;
+    left: 0px;
+}
+workpile > stack > .BlockWrapper:nth-child(9) {
+    position: absolute;
+    top: 128px;
+    left: 0px;
+}
+workpile > stack > .BlockWrapper:nth-child(10) {
+    position: absolute;
+    top: 144px;
+    left: 0px;
+}
+workpile > stack > .BlockWrapper:nth-child(11) {
+    position: absolute;
+    top: 160px;
+    left: 0px;
+}
+workpile > stack > .BlockWrapper:nth-child(12) {
+    position: absolute;
+    top: 176px;
+    left: 0px;
+}
+workpile > stack > .BlockWrapper:nth-child(13) {
+    position: absolute;
+    top: 192px;
+    left: 0px;
+}
+
+
+
+nertzpile {
+    position: absolute;
+    right: -40px;
+    top: 30px;
+}
+nertzpile::after {
+    content: 'NERTZ';
+    position: absolute;
+    top: -28px;
+    margin: 0;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 300;
+    font-variation-settings: 'wght' 450;
+
+    color: gray;
+
+    letter-spacing: 0.75px;
+}
+nertzpile > .BlockWrapper {
+    position: absolute;
+    top: 0;
+
+    box-shadow: none;
+}
+nertzpile > .BlockWrapper.empty {
+    display: none;
+}
+
+nertzpile .Block--isDraggable .BlockContent {
+    box-shadow: none;
+}
+nertzpile > .BlockWrapper.last .Block--isDraggable .BlockContent  {
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 4px;
+}
+
+nertzpile::before {
+    content: 'YOU WIN!';
+    position: absolute;
+    top: 10px;
+    left: 0px;
+
+    margin: 0;
+    padding: 6px 10px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-variation-settings: 'wght' 450;
+    text-align: center;
+
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 14%) 0px 1px 4px;
+    border-radius: 5px;
+    color: #5a5a5a;
+
+    letter-spacing: 0.75px;
+
+    transition: 0.3s ease;
+}
+
+nertzpile > .BlockWrapper:nth-child(1) .Block--isDraggable .BlockContent {
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+}
+nertzpile > .BlockWrapper:nth-child(2) .Block--isDraggable .BlockContent {
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+}
+nertzpile > .BlockWrapper:nth-child(3) .Block--isDraggable .BlockContent {
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+}
+
+nertzpile > .BlockWrapper:nth-child(1) {
+    top: 12px;
+}
+nertzpile > .BlockWrapper:nth-child(2) {
+    top: 8px;
+}
+nertzpile > .BlockWrapper:nth-child(3) {
+    top: 4px;
+}
+
+
+/* Actually the wrapper for stock AND waste piles */
+stockpile {
+    position: relative;
+    top: 150px;
+    width: var(--card-width);
+    height: var(--card-height);
+}
+stockpile.hide {
+    display: none;
+}
+
+/* Stock pile */
+stockpile > .stock .BlockWrapper {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    
+    pointer-events: none;
+}
+stockpile > .stock .BlockWrapper.waste {
+    transition: left 0.6s;
+    left: 100px;
+}
+stockpile > .stock::before {
+    font-weight: 300;
+    content: 'STOCK';
+    position: absolute;
+    top: -30px;
+    margin: 0;
+    font-family: inherit;
+    font-size: 13px;
+    font-variation-settings: 'wght' 450;
+
+    color: gray;
+
+    letter-spacing: 0.75px;
+}
+stockpile > .stock::after {
+    font-weight: 300;
+    content: 'FLIP';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+    padding: 4px 7px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-variation-settings: 'wght' 450;
+    text-align: center;
+
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 16%) 0px 2px 4px;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    color: #5a5a5a;
+
+    letter-spacing: 0.75px;
+
+    transition: 0.3s ease;
+}
+stockpile > .stock.empty::after {
+    content: 'FLIP WASTE';
+    padding: 8px 7px;
+}
+stockpile > .stock:hover:after{
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 10px;
+    background: white;
+}
+stockpile > .stock:active:after{
+    background: rgb(239, 239, 239);
+}
+
+stockpile .stock .Block--isDraggable .BlockContent {
+    box-shadow: none;
+}
+
+stockpile > .stock .BlockWrapper:nth-child(1) .Block--isDraggable .BlockContent {
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+}
+stockpile > .stock .BlockWrapper:nth-child(2) .Block--isDraggable .BlockContent {
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+}
+stockpile > .stock .BlockWrapper:nth-child(3) .Block--isDraggable .BlockContent {
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+}
+
+stockpile > .stock .BlockWrapper:nth-child(1) {
+    top: 12px;
+}
+stockpile > .stock .BlockWrapper:nth-child(2) {
+    top: 8px;
+}
+stockpile > .stock .BlockWrapper:nth-child(3) {
+    top: 4px;
+}
+
+
+
+
+stockpile .stock .BlockWrapper.flipped {
+    perspective: 1000px;
+}
+
+stockpile .stock .BlockWrapper .Block--isDraggable .BlockContent  {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+stockpile .stock .BlockWrapper.flipped .Block--isDraggable .BlockContent  {
+    transform: rotateY(180deg);
+}
+
+stockpile > .stock > .BlockWrapper.last .Block--isDraggable .BlockContent  {
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 4px;
+}
+
+.stock card {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0);
+}
+
+.back {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    border-radius: 7px;
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.stock .back {
+    display: block;
+}
+.back svg {
+    transform: rotateY(180deg);
+}
+
+
+/* Waste pile */
+stockpile > .waste {
+    margin-left: 100px;
+}
+stockpile > .waste .BlockWrapper {
+    position: absolute;
+    top: 0;
+
+}
+stockpile > .waste::before {
+    font-weight: 300;
+    content: 'WASTE';
+    position: absolute;
+    top: -30px;
+    margin: 0;
+    font-family: inherit;
+    font-size: 13px;
+    font-variation-settings: 'wght' 450;
+
+    color: gray;
+
+    letter-spacing: 0.75px;
+}
+stockpile .waste .Block--isDraggable .BlockContent {
+    box-shadow: none;
+}
+stockpile > .waste > .BlockWrapper.last .Block--isDraggable .BlockContent  {
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 4px;
+}
+
+stockpile > .waste .BlockWrapper:nth-child(1) .Block--isDraggable .BlockContent {
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+}
+stockpile > .waste .BlockWrapper:nth-child(2) .Block--isDraggable .BlockContent {
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+}
+stockpile > .waste .BlockWrapper:nth-child(3) .Block--isDraggable .BlockContent {
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+}
+
+stockpile > .waste .BlockWrapper:nth-child(1) {
+    top: 12px;
+}
+stockpile > .waste .BlockWrapper:nth-child(2) {
+    top: 8px;
+}
+stockpile > .waste .BlockWrapper:nth-child(3) {
+    top: 4px;
+}
+
+
+/* Not ready 
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #313131;
+    }
+    .spades, .clubs {
+        color: #d6d6d6;
+    }
+    player::before {
+        color: #d6d6d6;
+    }
+    .Block--isDraggable .BlockContent {
+        background-color: rgb(0 0 0);
+    }
+    .foundations > stack::before {
+        background: #565656;
+    }
+    .back {
+        background: rgb(0 0 0);
+    }
+    stockpile > .stock::after {
+        background: rgb(58 58 58);
+        border: 1px solid rgb(98 98 98);
+        color: #d6d6d6;
+    }
+}
+*/
